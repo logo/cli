@@ -1,9 +1,20 @@
 #!/usr/bin/env node
 
 var fatal = require('../lib/utils').fatal;
-var join = require('path').join;
+var fs = require('fs');
 var khaos = require('khaos');
+var path = require('path');
 var program = require('commander');
+var resize = require('../lib/resize');
+var rm = require('rimraf').sync;
+var Svgo = require('svgo');
+
+var exists = fs.existsSync;
+var extname = path.extname;
+var join = path.join;
+var read = fs.readFileSync;
+var resolve = path.resolve;
+var write = fs.writeFileSync;
 
 /**
  * Program.
@@ -22,12 +33,38 @@ var path = join(process.cwd(), dir);
 var template = join(__dirname, '../support/template');
 
 /**
+ * Svg.
+ */
+
+var svg = new Svgo();
+
+/**
  * Khaos.
  */
 
 khaos(template, path, function(err, locals){
-  console.log();
-  if (err) fatal(err);
-  console.log('  Created "' + locals.name + '" logo component.');
-  console.log();
+  if (err) exit(err);
+
+  var image = resolve(process.cwd(), locals.svg);
+  if ('.svg' != extname(image)) return fn(new Error('must pass an SVG file'));
+  if (!exists(image)) return fn(new Error('could not find that SVG file'));
+
+  var str = read(image, 'utf8');
+  svg.optimize(str, function(res){
+    write(join(path, 'images/logo.svg'), res.data);
+    resize(path, function(err){
+      if (err) exit(err);
+    });
+  });
 });
+
+/**
+ * Cleanup and exit with an optional `err`.
+ *
+ * @param {Error or String} err
+ */
+
+function exit(err){
+  rm(path);
+  if (err) fatal(err);
+}

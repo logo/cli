@@ -6,7 +6,10 @@
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {
-    "commander": "~2.1.0"
+    "commander": "~2.1.0",
+    "svgo": "~0.4.4",
+    "rimraf": "~2.2.6",
+    "css": "~1.6.0"
   },
   "devDependencies": {
     "mocha": "1.x"

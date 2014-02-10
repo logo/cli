@@ -4,8 +4,7 @@
  */
 
 .logo[data-logo="{{ name }}"] {
-  width: 4.073626374em;
-  /* (3.37/0.91) * (1+.1) - 0 */
+  width: 0;
 }
 
 .logo[data-logo="{{ name }}"] > * {
