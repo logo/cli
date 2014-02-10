@@ -1,0 +1,22 @@
+
+/**
+ * {{ name }} logo.
+ */
+
+.logo[data-logo="{{ name }}"] {
+  width: 4.073626374em;
+  /* (3.37/0.91) * (1+.1) - 0 */
+}
+
+.logo[data-logo="{{ name }}"] > * {
+  background-image: url(images/logo.svg);
+  margin: 0 0 0 0;
+}
+
+.logo[data-logo="{{ name }}"][data-color="black"] > * {
+  background-image: url(images/logo-black.svg);
+}
+
+.logo[data-logo="{{ name }}"][data-color="white"] > * {
+  background-image: url(images/logo-white.svg);
+}

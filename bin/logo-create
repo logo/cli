@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+var fatal = require('../lib/utils').fatal;
+var join = require('path').join;
+var khaos = require('khaos');
+var program = require('commander');
+
+/**
+ * Program.
+ */
+
+program
+  .usage('[directory]')
+  .parse(process.argv);
+
+/**
+ * Settings.
+ */
+
+var dir = program.args[0] || '.';
+var path = join(process.cwd(), dir);
+var template = join(__dirname, '../support/template');
+
+/**
+ * Khaos.
+ */
+
+khaos(template, path, function(err, locals){
+  console.log();
+  if (err) fatal(err);
+  console.log('  Created "' + locals.name + '" logo component.');
+  console.log();
+});

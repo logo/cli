@@ -1,0 +1,18 @@
+{
+  "logo": "{{ name }}",
+  "name": "{{ slug }}",
+  "repo": "{{ owner }}/{{ slug }}",
+  "version": "0.0.1",
+  "license": "MIT",
+  "styles": [
+    "index.css"
+  ],
+  "images": [
+    "images/logo-black.svg",
+    "images/logo-white.svg",
+    "images/logo.svg"
+  ],
+  "dependencies": {
+    "logo/logo": "*"
+  }
+}

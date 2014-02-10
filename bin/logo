@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+var exists = require('fs').existsSync;
+var fatal = require('../lib/utils').fatal;
+var join = require('path').join;
+var program = require('commander');
+var spawn = require('child_process').spawn;
+
+/**
+ * Program.
+ */
+
+program
+  .version(require('../package').version)
+  .usage('<command> [options]')
+  .parse(process.argv);
+
+/**
+ * Pad output.
+ */
+
+console.log();
+program.on('exit', function(){ console.log(); });
+
+/**
+ * Settings.
+ */
+
+var cmd = program.args[0];
+var args = [].slice.call(program.args, 1);
+
+if (!cmd) program.help();
+
+var bin = 'logo-' + cmd;
+var path = join(__dirname, bin);
+
+if (!exists(path)) fatal('Unknown command "%s".', bin);
+
+/**
+ * Spawn.
+ */
+
+var proc = spawn(path, args, { stdio: 'inherit' })
+  .on('close', process.exit.bind(process));
