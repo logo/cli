@@ -2,6 +2,7 @@
   "logo": "{{ name }}",
   "name": "{{ slug }}",
   "repo": "{{ owner }}/{{ slug }}",
+  "description": "The {{ name }} logo.",
   "version": "0.0.1",
   "license": "MIT",
   "styles": [
