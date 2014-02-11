@@ -13,7 +13,25 @@ var spawn = require('child_process').spawn;
 program
   .version(require('../package').version)
   .usage('<command> [options]')
-  .parse(process.argv);
+
+/**
+ * Help.
+ */
+
+program.on('--help', function(){
+  console.log('  Commands:');
+  console.log();
+  console.log('    logo create <directory>    create a new logo component directory');
+  console.log('    logo resize                recalculate the current logo\'s width');
+  console.log('    logo test                  open a test page for the current logo');
+  console.log();
+});
+
+/**
+ * Parse.
+ */
+
+program.parse(process.argv);
 
 /**
  * Pad output.
