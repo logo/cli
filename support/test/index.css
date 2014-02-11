@@ -25,6 +25,10 @@ ul:first-of-type li {
   padding-top: 2em;
 }
 
+ul:first-of-type li:last-child {
+  background-color: #222;
+}
+
 ul:first-of-type li:last-child label {
   color: white;
   opacity: .5;

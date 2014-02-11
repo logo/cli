@@ -13,7 +13,9 @@
     "express": "~3.4.8",
     "consolidate": "~0.10.0",
     "handlebars": "~2.0.0-alpha.1",
-    "open": "0.0.4"
+    "open": "0.0.4",
+    "component-builder": "~0.10.1",
+    "mkdirp": "~0.3.5"
   },
   "devDependencies": {
     "mocha": "1.x"

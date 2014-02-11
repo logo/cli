@@ -1,34 +1,40 @@
 #!/usr/bin/env node
 
+var Builder = require('component-builder');
 var cons = require('consolidate');
 var exists = require('fs').existsSync;
 var express = require('express');
 var fatal = require('../lib/utils').fatal;
 var http = require('http');
 var join = require('path').join;
+var mkdir = require('mkdirp').sync;
 var open = require('open');
+var resize = require('../lib/resize');
+var write = require('fs').writeFileSync;
 
 /**
  * Settings.
  */
 
-var json = join(process.cwd(), 'component.json');
+var dir = process.cwd();
+var support = join(__dirname, '../support/test');
+var out = join(dir, 'build');
+var json = join(dir, 'component.json');
+
 if (!exists(json)) fatal('Not a logo component directory.');
+
 json = require(json);
 
 /**
  * App.
  */
 
-var support = join(__dirname, '../support/test');
-var build = join(process.cwd(), 'build');
-
 var app = express()
   .set('views', support)
   .engine('html', cons.handlebars)
-  .get('/', tests)
+  .get('/', build, tests)
   .use(express.static(support))
-  .use(express.static(build));
+  .use(express.static(out));
 
 /**
  * Listen.
@@ -39,16 +45,35 @@ var server = http.createServer(app);
 server.listen(function(){
   var port = server.address().port;
   var url = 'http://localhost:' + port;
-  open(url, 'google chrome');
+  open(url);
   console.log();
   console.log('  Tests running at ' + url + ' ...');
   console.log();
 });
 
 /**
- * Tests page.
+ * Tests.
  */
 
 function tests(req, res, next){
   res.render('index.html', json);
+}
+
+/**
+ * Build.
+ */
+
+function build(req, res, next){
+  var builder = new Builder(dir);
+  builder.development();
+  builder.copyAssetsTo(out);
+  resize(dir, function(err){
+    if (err) return next(err);
+    builder.build(function(err, res){
+      if (err) return next(err);
+      mkdir(out);
+      write(join(out, 'build.css'), res.css);
+      next();
+    });
+  });
 }

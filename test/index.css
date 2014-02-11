@@ -1,0 +1,21 @@
+
+/**
+ * name logo.
+ */
+
+.logo[data-logo="name"] {
+  width: 3.0502624266748994em;
+}
+
+.logo[data-logo="name"] > * {
+  background-image: url(images/logo.svg);
+  margin: -.05em 0 -.15em 0;
+}
+
+.logo[data-logo="name"][data-color="black"] > * {
+  background-image: url(images/logo-black.svg);
+}
+
+.logo[data-logo="name"][data-color="white"] > * {
+  background-image: url(images/logo-white.svg);
+}
