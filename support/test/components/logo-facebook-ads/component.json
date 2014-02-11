@@ -1,0 +1,17 @@
+{
+  "name": "facebook-ads",
+  "version": "0.0.1",
+  "repo": "logo/facebook-ads",
+  "images": [
+    "images/logo-black.svg",
+    "images/logo-white.svg",
+    "images/logo.svg"
+  ],
+  "styles": [
+    "index.css"
+  ],
+  "development": {
+    "logo/logo": "*"
+  },
+  "license": "MIT"
+}

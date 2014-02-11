@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>{{ name }} logo tests</title>
+  <link rel="stylesheet" href="build.css" />
+  <link rel="stylesheet" href="build/build.css" />
+</head>
+<body>
+  <ul>
+    <li><label>Normal</label><div class="logo" data-logo="{{ logo }}"><span></span></div>
+    <li><label>Black</label><div class="logo" data-logo="{{ logo }}" data-variation="black"><span></span></div>
+    <li style="background-color: black"><label>White</label><div class="logo" data-logo="{{ logo }}" data-variation="white"><span></span></div>
+  </ul>
+  <p>Make the middle logo <strong>appear</strong> visually centered, and exactly as big as the others, using CSS margins. Its width will be automatically resized when you call <strong>logo resize</strong> from the CLI.</p>
+  <ul>
+    <li><div class="logo" data-logo="AdRoll"><span></span></div>
+    <li><div class="logo" data-logo="Bitdeli"><span></span></div>
+    <li><div class="logo" data-logo="Chartbeat"><span></span></div>
+    <li><div class="logo" data-logo="Component"><span></span></div>
+    <li><div class="logo" data-logo="Errorception"><span></span></div>
+    <li><div class="logo" data-logo="Facebook Ads"><span></span></div>
+    <li><div class="logo" data-logo="GitHub"><span></span></div>
+    <li><div class="logo" data-logo="{{ logo }}"><span></span></div>
+    <li><div class="logo" data-logo="Google Analytics"><span></span></div>
+    <li><div class="logo" data-logo="Help Scout"><span></span></div>
+    <li><div class="logo" data-logo="Heroku"><span></span></div>
+    <li><div class="logo" data-logo="Keen IO"><span></span></div>
+    <li><div class="logo" data-logo="Optimizely"><span></span></div>
+    <li><div class="logo" data-logo="Salesforce"><span></span></div>
+    <li><div class="logo" data-logo="Segment.io"><span></span></div>
+  </ul>
+</body>
+</html>

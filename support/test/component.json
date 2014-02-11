@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "private": true,
+  "styles": ["index.css"],
+  "dependencies": {
+    "ianstormtaylor/reset": "*",
+    "logo/adroll": "*",
+    "logo/bitdeli": "*",
+    "logo/chartbeat": "*",
+    "logo/component": "*",
+    "logo/errorception": "*",
+    "logo/facebook-ads": "*",
+    "logo/github": "*",
+    "logo/google-analytics": "*",
+    "logo/help-scout": "*",
+    "logo/heroku": "*",
+    "logo/keen-io": "*",
+    "logo/optimizely": "*",
+    "logo/salesforce": "*",
+    "logo/segmentio": "*"
+  }
+}

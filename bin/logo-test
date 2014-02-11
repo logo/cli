@@ -1,0 +1,54 @@
+#!/usr/bin/env node
+
+var cons = require('consolidate');
+var exists = require('fs').existsSync;
+var express = require('express');
+var fatal = require('../lib/utils').fatal;
+var http = require('http');
+var join = require('path').join;
+var open = require('open');
+
+/**
+ * Settings.
+ */
+
+var json = join(process.cwd(), 'component.json');
+if (!exists(json)) fatal('Not a logo component directory.');
+json = require(json);
+
+/**
+ * App.
+ */
+
+var support = join(__dirname, '../support/test');
+var build = join(process.cwd(), 'build');
+
+var app = express()
+  .set('views', support)
+  .engine('html', cons.handlebars)
+  .get('/', tests)
+  .use(express.static(support))
+  .use(express.static(build));
+
+/**
+ * Listen.
+ */
+
+var server = http.createServer(app);
+
+server.listen(function(){
+  var port = server.address().port;
+  var url = 'http://localhost:' + port;
+  open(url, 'google chrome');
+  console.log();
+  console.log('  Tests running at ' + url + ' ...');
+  console.log();
+});
+
+/**
+ * Tests page.
+ */
+
+function tests(req, res, next){
+  res.render('index.html', json);
+}

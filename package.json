@@ -9,7 +9,11 @@
     "commander": "~2.1.0",
     "svgo": "~0.4.4",
     "rimraf": "~2.2.6",
-    "css": "~1.6.0"
+    "css": "~1.6.0",
+    "express": "~3.4.8",
+    "consolidate": "~0.10.0",
+    "handlebars": "~2.0.0-alpha.1",
+    "open": "0.0.4"
   },
   "devDependencies": {
     "mocha": "1.x"

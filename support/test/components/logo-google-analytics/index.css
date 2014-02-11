@@ -1,0 +1,26 @@
+
+/**
+ * Google Analytics
+ */
+
+.logo[data-logo="Google Analytics"] {
+  width: 5.834200329em;
+  /* (169.434/27.355) * (1-.04-.01) - .05 */
+}
+
+.logo[data-logo="Google Analytics"] > * {
+  background-image: url(images/logo.svg);
+  margin: .05em 0 0 -.05em;
+}
+
+.logo[data-logo="Google Analytics"].monochromatic > * {
+  background-image: url(images/logo-monochromatic.svg);
+}
+
+.logo[data-logo="Google Analytics"][data-color="black"] > * {
+  background-image: url(images/logo-black.svg);
+}
+
+.logo[data-logo="Google Analytics"][data-color="white"] > * {
+  background-image: url(images/logo-white.svg);
+}

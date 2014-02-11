@@ -1,0 +1,18 @@
+
+/**
+ * Optimizely
+ */
+
+.logo[data-logo="Optimizely"] {
+  width: 4.008663102em;
+  /* (96.04/20.57) * (1-.1-.02) - .05-.05 */
+}
+
+.logo[data-logo="Optimizely"] > * {
+  background-image: url(images/logo.svg);
+  margin: .02em -.05em .1em -.05em;
+}
+
+.logo[data-logo="Optimizely"].monochromatic > * {
+  background-image: url(images/logo-monochromatic.svg);
+}

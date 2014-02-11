@@ -1,0 +1,58 @@
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 3em auto;
+  width: 28em;
+  line-height: 1.4;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .4em;
+  opacity: .4;
+}
+
+ul:first-of-type li {
+  padding-top: 2em;
+}
+
+ul:first-of-type li:last-child label {
+  color: white;
+  opacity: .5;
+}
+
+ul {
+  overflow: hidden;
+  margin: 3em auto;
+  padding: 0;
+  max-width: 60em;
+}
+
+li {
+  position: relative;
+  float: left;
+  width: 33.333%;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 1.8em;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+li:not(:nth-child(3n+1)) {
+  margin-left: -1px;
+}
+
+li:nth-child(8) {
+  z-index: 1;
+  border-color: #ccc;
+}

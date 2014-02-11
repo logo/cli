@@ -1,0 +1,18 @@
+
+/**
+ * Errorception
+ */
+
+.logo[data-logo="Errorception"] {
+  width: 5.812487226em;
+  /* (568.78/60.67) * (1-.19-.19) - 0 */
+}
+
+.logo[data-logo="Errorception"] > * {
+  background-image: url(images/logo.svg);
+  margin: .19em 0 .19em 0;
+}
+
+.logo[data-logo="Errorception"].monochromatic > * {
+  background-image: url(images/logo-monochromatic.svg);
+}

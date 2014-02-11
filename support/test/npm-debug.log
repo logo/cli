@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'component',
+1 verbose cli   '0.17.1' ]
+2 info using npm@1.3.25
+3 info using node@v0.11.11
+4 verbose cache add [ 'component', null ]
+5 verbose cache add name=undefined spec="component" args=["component",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'component',
+6 verbose parsed url   path: 'component',
+6 verbose parsed url   href: 'component' }
+7 verbose cache add [ '0.17.1', null ]
+8 verbose cache add name=undefined spec="0.17.1" args=["0.17.1",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: '0.17.1',
+9 verbose parsed url   path: '0.17.1',
+9 verbose parsed url   href: '0.17.1' }
+10 silly lockFile 335c4c1e-component component
+11 verbose lock component /Users/Storm/.npm/335c4c1e-component.lock
+12 silly lockFile 72327881-0-17-1 0.17.1
+13 verbose lock 0.17.1 /Users/Storm/.npm/72327881-0-17-1.lock
+14 silly lockFile 335c4c1e-component component
+15 silly lockFile 335c4c1e-component component
+16 silly lockFile 72327881-0-17-1 0.17.1
+17 silly lockFile 72327881-0-17-1 0.17.1
+18 verbose addNamed [ 'component', '' ]
+19 verbose addNamed [ null, '*' ]
+20 silly lockFile fa4251c1-component component@
+21 verbose lock component@ /Users/Storm/.npm/fa4251c1-component.lock
+22 verbose addNamed [ '0.17.1', '' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 81f2dd1b-0-17-1 0.17.1@
+25 verbose lock 0.17.1@ /Users/Storm/.npm/81f2dd1b-0-17-1.lock
+26 silly addNameRange { name: 'component', range: '*', hasData: false }
+27 silly addNameRange { name: '0.17.1', range: '*', hasData: false }
+28 verbose url raw 0.17.1
+29 verbose url resolving [ 'https://registry.npmjs.org/', './0.17.1' ]
+30 verbose url resolved https://registry.npmjs.org/0.17.1
+31 info trying registry request attempt 1 at 17:41:06
+32 http GET https://registry.npmjs.org/0.17.1
+33 verbose url raw component
+34 verbose url resolving [ 'https://registry.npmjs.org/', './component' ]
+35 verbose url resolved https://registry.npmjs.org/component
+36 info trying registry request attempt 1 at 17:41:06
+37 verbose etag "7L50A5HEIVO56XJF7FXDO75MM"
+38 http GET https://registry.npmjs.org/component
+39 http 404 https://registry.npmjs.org/0.17.1
+40 silly registry.get cb [ 404,
+40 silly registry.get   { date: 'Tue, 11 Feb 2014 01:41:09 GMT',
+40 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+40 silly registry.get     'content-type': 'application/json',
+40 silly registry.get     'accept-ranges': 'bytes, bytes',
+40 silly registry.get     via: '1.1 varnish, 1.1 varnish',
+40 silly registry.get     age: '0, 0',
+40 silly registry.get     'cache-control': 'max-age=0',
+40 silly registry.get     'content-length': '52',
+40 silly registry.get     'x-served-by': 'cache-v37-ASH, cache-lax1421-LAX',
+40 silly registry.get     'x-cache': 'MISS, MISS',
+40 silly registry.get     'x-cache-hits': '0, 0',
+40 silly registry.get     'x-timer': 'S1392082869.564238310,VS0,VS35,VE57,VE87',
+40 silly registry.get     connection: 'close' } ]
+41 silly lockFile 81f2dd1b-0-17-1 0.17.1@
+42 silly lockFile 81f2dd1b-0-17-1 0.17.1@
+43 error 404 '0.17.1' is not in the npm registry.
+43 error 404 You should bug the author to publish it
+43 error 404
+43 error 404 Note that you can also install from a
+43 error 404 tarball, folder, or http url, or git url.
+44 error System Darwin 13.0.0
+45 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "component" "0.17.1"
+46 error cwd /Users/Storm/dev/logo/cli/support/test
+47 error node -v v0.11.11
+48 error npm -v 1.3.25
+49 error code E404
+50 verbose exit [ 1, true ]

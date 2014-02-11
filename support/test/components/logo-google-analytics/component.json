@@ -1,0 +1,18 @@
+{
+  "name": "google-analytics",
+  "version": "0.0.1",
+  "repo": "logo/google-analytics",
+  "images": [
+    "images/logo-black.svg",
+    "images/logo-monochromatic.svg",
+    "images/logo-white.svg",
+    "images/logo.svg"
+  ],
+  "styles": [
+    "index.css"
+  ],
+  "development": {
+    "logo/logo": "*"
+  },
+  "license": "MIT"
+}

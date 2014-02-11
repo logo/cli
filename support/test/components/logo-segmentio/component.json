@@ -1,0 +1,21 @@
+{
+  "name": "segmentio",
+  "version": "0.0.1",
+  "repo": "logo/segmentio",
+  "images": [
+    "images/logo-black.svg",
+    "images/logo-icon-black.svg",
+    "images/logo-icon-white.svg",
+    "images/logo-icon.svg",
+    "images/logo-monochromatic.svg",
+    "images/logo-white.svg",
+    "images/logo.svg"
+  ],
+  "styles": [
+    "index.css"
+  ],
+  "development": {
+    "logo/logo": "*"
+  },
+  "license": "MIT"
+}

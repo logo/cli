@@ -1,0 +1,18 @@
+
+/**
+ * Component
+ */
+
+.logo[data-logo="Component"] {
+  width: 5.213114754em;
+  /* (3.18/0.61) * (1) - 0 */
+}
+
+.logo[data-logo="Component"] > * {
+  background-image: url(images/logo.svg);
+  margin: 0;
+}
+
+.logo[data-logo="Component"].monochromatic > * {
+  background-image: url(images/logo-monochromatic.svg);
+}

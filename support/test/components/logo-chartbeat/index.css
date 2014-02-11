@@ -1,0 +1,18 @@
+
+/**
+ * Chartbeat
+ */
+
+.logo[data-logo="Chartbeat"] {
+  width: 4.1383032em;
+  /* (863.54/178.1) * (1+.06-.19) - .05-.03 */
+}
+
+.logo[data-logo="Chartbeat"] > * {
+  background-image: url(images/logo.svg);
+  margin: -.06em -.05em .19em -.03em;
+}
+
+.logo[data-logo="Chartbeat"].monochromatic > * {
+  background-image: url(images/logo-monochromatic.svg);
+}

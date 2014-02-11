@@ -1,0 +1,16 @@
+{
+  "name": "chartbeat",
+  "version": "0.0.1",
+  "repo": "logo/chartbeat",
+  "images": [
+    "images/logo-monochromatic.svg",
+    "images/logo.svg"
+  ],
+  "styles": [
+    "index.css"
+  ],
+  "development": {
+    "logo/logo": "*"
+  },
+  "license": "MIT"
+}

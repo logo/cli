@@ -1,0 +1,18 @@
+
+/**
+ * Salesforce
+ */
+
+.logo[data-logo="Salesforce"] {
+  width: 3.764142954em;
+  /* (170.95/59.04) * (1+.1+.2) - 0 */
+}
+
+.logo[data-logo="Salesforce"] > * {
+  background-image: url(images/logo.svg);
+  margin: -.1em 0 -.2em 0;
+}
+
+.logo[data-logo="Salesforce"].monochromatic > * {
+  background-image: url(images/logo-monochromatic.svg);
+}

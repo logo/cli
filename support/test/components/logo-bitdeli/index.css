@@ -1,0 +1,18 @@
+
+/**
+ * Bitdeli
+ */
+
+.logo[data-logo="Bitdeli"] {
+  width: 2.449589041em;
+  /* (194.46/69.46) * (1+.08-.14) - .1 */
+}
+
+.logo[data-logo="Bitdeli"] > * {
+  background-image: url(images/logo.svg);
+  margin: -.08em 0 .14em -.1em;
+}
+
+.logo[data-logo="Bitdeli"].monochromatic > * {
+  background-image: url(images/logo-monochromatic.svg);
+}

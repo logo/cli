@@ -1,0 +1,22 @@
+
+/**
+ * Help Scout
+ */
+
+.logo[data-logo="Help Scout"] {
+  width: 5.0802537em;
+  /* (24.52/4.73) * (1-.01-.01) - 0 */
+}
+
+.logo[data-logo="Help Scout"] > * {
+  background-image: url(images/logo.svg);
+  margin: .01em 0 .01em 0;
+}
+
+.logo[data-logo="Help Scout"][data-color="black"] > * {
+  background-image: url(images/logo-black.svg);
+}
+
+.logo[data-logo="Help Scout"][data-color="white"] > * {
+  background-image: url(images/logo-white.svg);
+}

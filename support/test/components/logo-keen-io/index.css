@@ -1,0 +1,18 @@
+
+/**
+ * Keen IO
+ */
+
+.logo[data-logo="Keen IO"] {
+  width: 3.98175625em;
+  /* (593.71/128) * (1-.12) - .1 */
+}
+
+.logo[data-logo="Keen IO"] > * {
+  background-image: url(images/logo.svg);
+  margin: 0 0 .12em -.1em;
+}
+
+.logo[data-logo="Keen IO"].monochromatic > * {
+  background-image: url(images/logo-monochromatic.svg);
+}

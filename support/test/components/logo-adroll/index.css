@@ -1,0 +1,22 @@
+
+/**
+ * AdRoll
+ */
+
+.logo[data-logo="AdRoll"] {
+  width: 3.309053432em;
+  /* (192.73/43.42) * (1-.1-.15) - .02 */
+}
+
+.logo[data-logo="AdRoll"] > * {
+  background-image: url(images/logo.svg);
+  margin: .1em -.02em .15em 0;
+}
+
+.logo[data-logo="AdRoll"][data-color="black"] > * {
+  background-image: url(images/logo-black.svg);
+}
+
+.logo[data-logo="AdRoll"][data-color="white"] > * {
+  background-image: url(images/logo-white.svg);
+}
