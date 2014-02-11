@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var convert = require('../lib/convert');
+var fatal = require('../lib/utils').fatal;
+var fs = require('fs');
+var path = require('path');
+var program = require('commander');
+
+var exists = fs.existsSync;
+var extname = path.extname;
+var join = path.join;
+var resolve = path.resolve;
+
+/**
+ * Program.
+ */
+
+program
+  .usage('<image>')
+  .parse(process.argv);
+
+/**
+ * Settings.
+ */
+
+var dir = process.cwd();
+var image = resolve(dir, program.args[0]);
+var template = join(__dirname, '../support/template');
+
+if (!exists(image)) fatal('image file does not exist');
+
+/**
+ * Convert.
+ */
+
+convert(dir, image, function(err){
+  if (err) fatal(err);
+});
