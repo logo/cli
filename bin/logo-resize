@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
+var fatal = require('../lib/utils').fatal;
 var resize = require('../lib/resize');
 
 /**
  * Resize.
  */
 
-resize(process.cwd());
+resize(process.cwd(), function(err){
+  if (err) fatal(err);
+});
