@@ -9,6 +9,21 @@
 
 ## API
 
+    $ logo --help
+    
+      Usage: logo <command> [options]
+    
+      Options:
+    
+        -h, --help     output usage information
+        -V, --version  output the version number
+    
+      Commands:
+    
+        logo create <directory>    create a new logo component directory
+        logo resize                recalculate the current logo's width
+        logo test                  open a test page for the current logo
+
 #### logo create \<directory\>
 
   Create a new logo component in a new `directory`. The CLI will prompt you for all the required information and then generate the component directory.
