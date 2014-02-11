@@ -7,6 +7,10 @@
 
     $ npm install -g logo-cli
 
+## Workflow
+
+  Generally the workflow is that you create a new repository for your logo with `logo create` and then `cd` into that repo and run `logo test`, which will automatically re-build as you make changes to your files.
+
 ## API
 
     $ logo --help
@@ -23,6 +27,7 @@
         logo create <directory>    create a new logo component directory
         logo resize                recalculate the current logo's width
         logo test                  open a test page for the current logo
+
 
 ## License
 
