@@ -1,4 +1,8 @@
 
+0.0.4 - March 10, 2013
+----------------------
+* convert test files to by copied not symlinked
+
 0.0.3 - March 10, 2013
 ----------------------
 * add bin commands to package.json
