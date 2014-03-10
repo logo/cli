@@ -1,4 +1,8 @@
 
+0.0.6 - March 10, 2013
+----------------------
+* try to fix `.npmignore` issue
+
 0.0.5 - March 10, 2013
 ----------------------
 * fix component symlink bullshit
