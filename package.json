@@ -2,7 +2,7 @@
   "name": "logo-cli",
   "description": "A CLI to make working with re-usable logo components easy.",
   "repository": "git://github.com/logo/logo-cli.git",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {
@@ -20,5 +20,12 @@
   },
   "devDependencies": {
     "mocha": "1.x"
+  },
+  "bin": {
+    "logo": "bin/logo",
+    "logo-convert": "bin/logo-convert",
+    "logo-create": "bin/logo-create",
+    "logo-resize": "bin/logo-resize",
+    "logo-test": "bin/logo-test"
   }
 }

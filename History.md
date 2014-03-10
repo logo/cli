@@ -1,4 +1,8 @@
 
+0.0.3 - March 10, 2013
+----------------------
+* add bin commands to package.json
+
 0.0.2 - March 10, 2013
 ----------------------
 * update khaos version
