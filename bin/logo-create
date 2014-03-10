@@ -2,7 +2,7 @@
 
 var fatal = require('../lib/utils').fatal;
 var join = require('path').join;
-var khaos = require('khaos');
+var Khaos = require('khaos');
 var program = require('commander');
 var rm = require('rimraf').sync;
 
@@ -25,8 +25,6 @@ var template = join(__dirname, '../support/template');
  * Khaos.
  */
 
-khaos(template, dir, function(err, locals){
-  if (!err) return;
-  rm(dir);
-  fatal(err);
+Khaos(template, dir).run(function(err){
+  if (err) fatal(err);
 });
