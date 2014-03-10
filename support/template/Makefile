@@ -1,5 +1,5 @@
 
-build: components index.css
+build: components index.css images/*
 	@component build --dev
 
 clean:
