@@ -1,4 +1,8 @@
 
+0.0.5 - March 10, 2013
+----------------------
+* fix component symlink bullshit
+
 0.0.4 - March 10, 2013
 ----------------------
 * convert test files to by copied not symlinked

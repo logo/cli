@@ -628,7 +628,7 @@ pre {
  */
 
 .logo[data-logo="Facebook Ads"] {
-  width: 5.56428277em;
+  width: 5.544328758398224em;
   /* (348.36/48.52) * (1-.1-.125) - 0 */
 }
 
@@ -644,7 +644,6 @@ pre {
 .logo[data-logo="Facebook Ads"][data-color="white"] > * {
   background-image: url("logo-facebook-ads/images/logo-white.svg");
 }
-
 
 /**
  * GitHub
