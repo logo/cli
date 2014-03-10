@@ -1,4 +1,8 @@
 
+0.0.8 - March 10, 2013
+----------------------
+* change .gitignore to circumvent npm
+
 0.0.7 - March 10, 2013
 ----------------------
 * literally wtf npm

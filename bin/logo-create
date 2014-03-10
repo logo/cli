@@ -25,6 +25,25 @@ var template = join(__dirname, '../support/template');
  * Khaos.
  */
 
-Khaos(template, dir).run(function(err){
+var khaos = Khaos(template, dir);
+
+/**
+ * Add a `.gitignore` afterwards, since npm is too smart for it's own good.
+ *
+ * @param {Object} files
+ * @param {Metalsmith} metalsmith
+ * @param {Function} done
+ */
+
+khaos.use(function(files, metalsmith, done){
+  files['.gitignore'] = { contents: new Buffer('build/\ncomponents/\n') };
+  done();
+});
+
+/**
+ * Run.
+ */
+
+khaos.run(function(err){
   if (err) fatal(err);
 });
