@@ -1,4 +1,8 @@
 
+0.0.7 - March 10, 2013
+----------------------
+* literally wtf npm
+
 0.0.6 - March 10, 2013
 ----------------------
 * try to fix `.npmignore` issue
