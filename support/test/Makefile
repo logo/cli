@@ -1,6 +1,6 @@
 
 build: components index.css
-	@component build --dev --prefix . # hack for relative urls in builder bug
+	@component build --dev --copy --prefix . # hack for relative urls in builder bug
 
 clean:
 	@rm -rf build components
