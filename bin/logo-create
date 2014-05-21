@@ -46,4 +46,5 @@ khaos.use(function(files, metalsmith, done){
 
 khaos.run(function(err){
   if (err) fatal(err);
+  process.exit(0);
 });

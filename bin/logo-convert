@@ -35,4 +35,5 @@ if (!exists(image)) fatal('image file does not exist');
 
 convert(dir, image, function(err){
   if (err) fatal(err);
+  process.exit(0);
 });
