@@ -1,4 +1,9 @@
 
+0.0.10 / 2014-10-15
+===================
+
+  * Fix resize to parse heigth and width from viewBox
+
 0.0.9 - May 21, 2014
 --------------------
 * always `process.exit`
